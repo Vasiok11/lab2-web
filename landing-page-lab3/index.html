@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centrul Comercial Augustin</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#ffffff',
+                        'secondary': '#888888',
+                        'text-color': '#cccccc',
+                        'bg-color': '#1a1a1a',
+                        'card-bg': '#2a2a2a',
+                        'accent-hover': '#aaaaaa'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans leading-relaxed text-text-color bg-bg-color">
+    <header class="bg-bg-color shadow-[0_2px_5px_rgba(0,0,0,0.5)] sticky top-0 z-[100]">
+        <div class="w-[90%] max-w-[1200px] mx-auto flex justify-between items-center py-4">
+            <h1 class="text-2xl text-white font-bold uppercase tracking-[1px]">Centrul Augustin</h1>
+            <nav>
+                <ul class="flex list-none">
+                    <li class="ml-6"><a href="#home" class="no-underline text-text-color font-medium transition-colors duration-300 hover:text-white">Acasă</a></li>
+                    <li class="ml-6"><a href="#about" class="no-underline text-text-color font-medium transition-colors duration-300 hover:text-white">Despre Noi</a></li>
+                    <li class="ml-6"><a href="#shops" class="no-underline text-text-color font-medium transition-colors duration-300 hover:text-white">Magazinele Noastre</a></li>
+                    <li class="ml-6"><a href="#contact" class="no-underline text-text-color font-medium transition-colors duration-300 hover:text-white">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="eyebrow">Bun venit la</span>
+                <h2 class="hero-title">Centrul Augustin</h2>
+                <p class="hero-subtitle">Centrul tău local pentru cumpărături și servicii. Descoperă o varietate de magazine și servicii esențiale chiar în cartierul tău.</p>
+                <div class="hero-actions">
+                    <a href="#shops" class="cta-button">Explorează Magazinele</a>
+                    <a href="#about" class="secondary-button">Află Mai Multe</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: About Us -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image-wrapper">
+                    <img src="augustin.jpg" alt="Centrul Comercial Augustin" class="about-image">
+                </div>
+                <div class="about-text-wrapper">
+                    <div class="about-text">
+                        <span class="eyebrow">Despre Noi</span>
+                        <h2>Destinația Ta Locală Principală</h2>
+                        <p>Bun venit la Centrul Augustin, destinația ta principală pentru toate nevoile zilnice. Ne mândrim cu oferirea unei game diverse de magazine și servicii într-un mediu convenabil și prietenos.</p>
+                        <p>Fie că ești în căutarea unei farmacii, vrei să-ți răsfeți copiii cu jucării sau cauți tehnologie pentru casă, centrul nostru reunește afaceri locale de încredere sub același acoperiș pentru a servi mai bine comunitatea.</p>
+                    </div>
+                    <div class="about-features">
+                        <div class="feature-box">
+                            <h3>Locație Convenabilă</h3>
+                            <p>Ușor accesibil în inima cartierului, cu locuri de parcare și acces direct la bazarul nostru.</p>
+                        </div>
+                        <div class="feature-box">
+                            <h3>Magazine Diverse</h3>
+                            <p>De la farmacii la utilități pentru casă, găsești tot ce ai nevoie.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Our Shops -->
+    <section id="shops" class="shops-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="eyebrow">Directorul Centrului</span>
+                <h2>Descoperă Ce Se Află Înăuntru</h2>
+                <p>De la produse esențiale zilnice la cele mai noi electronice, explorează trei etaje de magazine și servicii dedicate.</p>
+            </div>
+            
+            <div class="shop-grid">
+                <!-- Floor 1 -->
+                <div class="shop-card">
+                    <div class="shop-number">01</div>
+                    <h3>Farmacie</h3>
+                    <p>Farmacia ta locală de încredere pentru rețete, sfaturi de sănătate și produse de wellness.</p>
+                    <span class="shop-hours">Etajul 1</span>
+                </div>
+
+                <div class="shop-card">
+                    <div class="shop-number">02</div>
+                    <h3>Articole Bisericești</h3>
+                    <p>Un magazin liniștit care oferă o varietate de articole religioase, cărți și cadouri pentru tine sau cei dragi.</p>
+                    <span class="shop-hours">Etajul 1</span>
+                </div>
+
+                <!-- Floor 2 -->
+                <div class="shop-card">
+                    <div class="shop-number">03</div>
+                    <h3>TechnoPlus</h3>
+                    <p>Un magazin uriaș de electronice cu electrocasnice, televizoare, mașini de spălat și multe altele.</p>
+                    <span class="shop-hours">Etajul 2</span>
+                </div>
+
+                <div class="shop-card">
+                    <div class="shop-number">04</div>
+                    <h3>Spații de Birouri</h3>
+                    <p>Zone moderne și spațioase disponibile pentru viitoare închirieri de birouri și afaceri.</p>
+                    <span class="shop-hours">Etajul 2</span>
+                </div>
+
+                <!-- Floor -1 -->
+                <div class="shop-card">
+                    <div class="shop-number">05</div>
+                    <h3>Copii și Jucării</h3>
+                    <p>Un magazin distractiv, orientat spre copii, plin de jucării, jocuri și activități pentru copii de toate vârstele.</p>
+                    <span class="shop-hours">Etajul -1</span>
+                </div>
+
+                <div class="shop-card">
+                    <div class="shop-number">06</div>
+                    <h3>Magazin de Dulciuri</h3>
+                    <p>Satisface-ți pofta de dulce cu o selecție largă de bomboane, ciocolată și bunătăți.</p>
+                    <span class="shop-hours">Etajul -1</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Contact & Location -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="eyebrow">Contactează-ne</span>
+                <h2>Vizitează-ne Astăzi</h2>
+                <p>Așteptăm cu nerăbdare vizita ta!</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <h3>Locație</h3>
+                        <p>str. 31 August 1989 28<br>Florești</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Program General</h3>
+                        <p>Luni - Duminică: 8:00 - 19:00</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Contact</h3>
+                        <p>Telefon: +373 60-707-147<br>Email: info@augustincenter.md</p>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <h3>Ai întrebări sau sugestii?</h3>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nume</label>
+                            <input type="text" id="name" name="name" required placeholder="Numele tău">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="Email-ul tău">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mesaj</label>
+                            <textarea id="message" name="message" rows="4" required placeholder="Cu ce te putem ajuta?"></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Trimite Mesajul</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h2>Centrul Augustin</h2>
+                    <p>Centrul tău local pentru cumpărături, servicii și comunitate în inima cartierului. Tot ce ai nevoie sub același acoperiș.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Linkuri Rapide</h3>
+                    <ul>
+                        <li><a href="#home">Acasă</a></li>
+                        <li><a href="#about">Despre Noi</a></li>
+                        <li><a href="#shops">Magazinele Noastre</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Urmărește-ne</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">Facebook</a>
+                        <a href="#" class="social-icon">Instagram</a>
+                        <a href="#" class="social-icon">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Centrul Comercial Augustin. Toate drepturile rezervate.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
