@@ -18,15 +18,47 @@
                         'bg-color': '#1a1a1a',
                         'card-bg': '#2a2a2a',
                         'accent-hover': '#aaaaaa'
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-15px)' },
+                        },
+                        wave: {
+                            '0%, 100%': { transform: 'rotate(0deg)' },
+                            '25%': { transform: 'rotate(15deg)' },
+                            '75%': { transform: 'rotate(-15deg)' },
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0', pointerEvents: 'none' },
+                            '100%': { opacity: '1', pointerEvents: 'auto' },
+                        }
+                    },
+                    animation: {
+                        'float': 'float 3s ease-in-out infinite',
+                        'wave': 'wave 2s ease-in-out infinite',
+                        'fade-in-delay': 'fadeIn 1s ease-in-out 3s forwards, float 3s ease-in-out infinite',
                     }
                 }
             }
         }
     </script>
 </head>
-<body class="font-sans leading-relaxed text-text-color bg-bg-color">
+<body class="font-sans leading-relaxed text-text-color bg-bg-color relative">
+    <!-- Mascot -->
+    <div class="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-50 group cursor-pointer opacity-0 animate-fade-in-delay" tabindex="0">
+        <div class="relative">
+            <!-- Speech Bubble -->
+            <div class="absolute -top-16 right-0 md:right-auto md:-left-24 bg-white text-black px-4 py-2 rounded-2xl text-sm font-bold opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus:opacity-100 shadow-lg whitespace-nowrap after:content-[''] after:absolute after:bottom-[-8px] after:right-4 after:border-t-8 after:border-t-white after:border-l-8 after:border-l-transparent after:border-r-8 after:border-r-transparent pointer-events-none">
+                Salut! Cu ce te pot ajuta?
+            </div>
+            <!-- Mascot Image -->
+            <img src="mascot.svg" alt="Mascot" class="w-16 h-16 md:w-32 md:h-32 drop-shadow-[0_0_15px_rgba(136,136,136,0.5)]">
+        </div>
+    </div>
+
     <header class="bg-bg-color shadow-[0_2px_5px_rgba(0,0,0,0.5)] sticky top-0 z-[100]">
-        <div class="w-[90%] max-w-[1200px] mx-auto flex justify-between items-center py-4 relative">
+        <div class="w-[90%] max-w-[1200px] mx-auto flex justify-between items-center py-4">
             <h1 class="text-xl md:text-2xl text-white font-bold uppercase tracking-[1px]">Centrul Augustin</h1>
             
             <!-- Desktop Nav -->
@@ -39,23 +71,26 @@
                 </ul>
             </nav>
 
-            <!-- Mobile Menu Button -->
-            <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
-                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-            </button>
-        </div>
+            <!-- Mobile Menu Wrapper -->
+            <div class="md:hidden group" tabindex="0">
+                <!-- Mobile Menu Button -->
+                <div class="text-white cursor-pointer focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </div>
 
-        <!-- Mobile Nav Menu -->
-        <nav id="mobile-menu" class="hidden md:hidden bg-card-bg border-t border-solid border-[#333] absolute w-full left-0 top-full shadow-lg">
-            <ul class="flex flex-col list-none p-4 m-0">
-                <li class="py-3 border-b border-solid border-[#333]"><a href="#home" class="mobile-link block no-underline text-text-color font-medium transition-colors duration-300 hover:text-white">Acasă</a></li>
-                <li class="py-3 border-b border-solid border-[#333]"><a href="#about" class="mobile-link block no-underline text-text-color font-medium transition-colors duration-300 hover:text-white">Despre Noi</a></li>
-                <li class="py-3 border-b border-solid border-[#333]"><a href="#shops" class="mobile-link block no-underline text-text-color font-medium transition-colors duration-300 hover:text-white">Magazinele Noastre</a></li>
-                <li class="py-3"><a href="#contact" class="mobile-link block no-underline text-text-color font-medium transition-colors duration-300 hover:text-white">Contact</a></li>
-            </ul>
-        </nav>
+                <!-- Mobile Nav Menu -->
+                <nav class="hidden group-focus:block group-focus-within:block bg-card-bg border-t border-solid border-[#333] absolute w-full left-0 top-full shadow-lg">
+                    <ul class="flex flex-col list-none p-4 m-0">
+                        <li class="py-3 border-b border-solid border-[#333]"><a href="#home" class="block no-underline text-text-color font-medium transition-colors duration-300 hover:text-white">Acasă</a></li>
+                        <li class="py-3 border-b border-solid border-[#333]"><a href="#about" class="block no-underline text-text-color font-medium transition-colors duration-300 hover:text-white">Despre Noi</a></li>
+                        <li class="py-3 border-b border-solid border-[#333]"><a href="#shops" class="block no-underline text-text-color font-medium transition-colors duration-300 hover:text-white">Magazinele Noastre</a></li>
+                        <li class="py-3"><a href="#contact" class="block no-underline text-text-color font-medium transition-colors duration-300 hover:text-white">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </header>
 
     <section id="home" class="min-h-[calc(100vh-74px)] flex items-center justify-center text-center py-16 bg-[radial-gradient(circle_at_center,#333333_0%,#1a1a1a_40%,#050505_100%)]">
@@ -110,16 +145,16 @@
                 <p class="text-base md:text-[1.1rem] text-[#ccc] max-w-[600px] mx-auto">De la produse esențiale zilnice la cele mai noi electronice, explorează trei etaje de magazine și servicii dedicate.</p>
             </div>
             
-            <div class="flex flex-wrap gap-6 md:gap-8 justify-center">
+            <div class="flex overflow-x-auto snap-x snap-mandatory gap-6 md:gap-8 pb-8 md:flex-wrap md:justify-center md:overflow-visible md:snap-none [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
                 <!-- Floor 1 -->
-                <div class="group bg-card-bg p-6 md:p-8 rounded-[10px] text-center shadow-[0_4px_15px_rgba(0,0,0,0.3)] transition-all duration-300 ease-in-out border-t-[5px] border-solid border-secondary w-full sm:flex-[1_1_314px] sm:max-w-[364px] hover:-translate-y-[10px] hover:shadow-[0_10px_25px_rgba(0,0,0,0.5)]">
+                <div class="group bg-card-bg p-6 md:p-8 rounded-[10px] text-center shadow-[0_4px_15px_rgba(0,0,0,0.3)] transition-all duration-300 ease-in-out border-t-[5px] border-solid border-secondary snap-center shrink-0 w-[85%] sm:w-auto sm:flex-[1_1_314px] sm:max-w-[364px] hover:-translate-y-[10px] hover:shadow-[0_10px_25px_rgba(0,0,0,0.5)]">
                     <div class="text-3xl md:text-[2.5rem] font-[800] text-secondary opacity-30 mb-4 inline-block font-mono transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:text-white">01</div>
                     <h3 class="text-xl md:text-[1.5rem] text-white mb-4">Farmacie</h3>
                     <p class="text-sm md:text-base text-[#bbb] mb-6 min-h-[60px]">Farmacia ta locală de încredere pentru rețete, sfaturi de sănătate și produse de wellness.</p>
                     <span class="block text-[0.9rem] text-secondary font-bold pt-4 border-t border-solid border-[#444]">Etajul 1</span>
                 </div>
 
-                <div class="group bg-card-bg p-6 md:p-8 rounded-[10px] text-center shadow-[0_4px_15px_rgba(0,0,0,0.3)] transition-all duration-300 ease-in-out border-t-[5px] border-solid border-secondary w-full sm:flex-[1_1_314px] sm:max-w-[364px] hover:-translate-y-[10px] hover:shadow-[0_10px_25px_rgba(0,0,0,0.5)]">
+                <div class="group bg-card-bg p-6 md:p-8 rounded-[10px] text-center shadow-[0_4px_15px_rgba(0,0,0,0.3)] transition-all duration-300 ease-in-out border-t-[5px] border-solid border-secondary snap-center shrink-0 w-[85%] sm:w-auto sm:flex-[1_1_314px] sm:max-w-[364px] hover:-translate-y-[10px] hover:shadow-[0_10px_25px_rgba(0,0,0,0.5)]">
                     <div class="text-3xl md:text-[2.5rem] font-[800] text-secondary opacity-30 mb-4 inline-block font-mono transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:text-white">02</div>
                     <h3 class="text-xl md:text-[1.5rem] text-white mb-4">Articole Bisericești</h3>
                     <p class="text-sm md:text-base text-[#bbb] mb-6 min-h-[60px]">Un magazin liniștit care oferă o varietate de articole religioase, cărți și cadouri pentru tine sau cei dragi.</p>
@@ -127,14 +162,14 @@
                 </div>
 
                 <!-- Floor 2 -->
-                <div class="group bg-card-bg p-6 md:p-8 rounded-[10px] text-center shadow-[0_4px_15px_rgba(0,0,0,0.3)] transition-all duration-300 ease-in-out border-t-[5px] border-solid border-secondary w-full sm:flex-[1_1_314px] sm:max-w-[364px] hover:-translate-y-[10px] hover:shadow-[0_10px_25px_rgba(0,0,0,0.5)]">
+                <div class="group bg-card-bg p-6 md:p-8 rounded-[10px] text-center shadow-[0_4px_15px_rgba(0,0,0,0.3)] transition-all duration-300 ease-in-out border-t-[5px] border-solid border-secondary snap-center shrink-0 w-[85%] sm:w-auto sm:flex-[1_1_314px] sm:max-w-[364px] hover:-translate-y-[10px] hover:shadow-[0_10px_25px_rgba(0,0,0,0.5)]">
                     <div class="text-3xl md:text-[2.5rem] font-[800] text-secondary opacity-30 mb-4 inline-block font-mono transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:text-white">03</div>
                     <h3 class="text-xl md:text-[1.5rem] text-white mb-4">TechnoPlus</h3>
                     <p class="text-sm md:text-base text-[#bbb] mb-6 min-h-[60px]">Un magazin uriaș de electronice cu electrocasnice, televizoare, mașini de spălat și multe altele.</p>
                     <span class="block text-[0.9rem] text-secondary font-bold pt-4 border-t border-solid border-[#444]">Etajul 2</span>
                 </div>
 
-                <div class="group bg-card-bg p-6 md:p-8 rounded-[10px] text-center shadow-[0_4px_15px_rgba(0,0,0,0.3)] transition-all duration-300 ease-in-out border-t-[5px] border-solid border-secondary w-full sm:flex-[1_1_314px] sm:max-w-[364px] hover:-translate-y-[10px] hover:shadow-[0_10px_25px_rgba(0,0,0,0.5)]">
+                <div class="group bg-card-bg p-6 md:p-8 rounded-[10px] text-center shadow-[0_4px_15px_rgba(0,0,0,0.3)] transition-all duration-300 ease-in-out border-t-[5px] border-solid border-secondary snap-center shrink-0 w-[85%] sm:w-auto sm:flex-[1_1_314px] sm:max-w-[364px] hover:-translate-y-[10px] hover:shadow-[0_10px_25px_rgba(0,0,0,0.5)]">
                     <div class="text-3xl md:text-[2.5rem] font-[800] text-secondary opacity-30 mb-4 inline-block font-mono transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:text-white">04</div>
                     <h3 class="text-xl md:text-[1.5rem] text-white mb-4">Spații de Birouri</h3>
                     <p class="text-sm md:text-base text-[#bbb] mb-6 min-h-[60px]">Zone moderne și spațioase disponibile pentru viitoare închirieri de birouri și afaceri.</p>
@@ -142,14 +177,14 @@
                 </div>
 
                 <!-- Floor -1 -->
-                <div class="group bg-card-bg p-6 md:p-8 rounded-[10px] text-center shadow-[0_4px_15px_rgba(0,0,0,0.3)] transition-all duration-300 ease-in-out border-t-[5px] border-solid border-secondary w-full sm:flex-[1_1_314px] sm:max-w-[364px] hover:-translate-y-[10px] hover:shadow-[0_10px_25px_rgba(0,0,0,0.5)]">
+                <div class="group bg-card-bg p-6 md:p-8 rounded-[10px] text-center shadow-[0_4px_15px_rgba(0,0,0,0.3)] transition-all duration-300 ease-in-out border-t-[5px] border-solid border-secondary snap-center shrink-0 w-[85%] sm:w-auto sm:flex-[1_1_314px] sm:max-w-[364px] hover:-translate-y-[10px] hover:shadow-[0_10px_25px_rgba(0,0,0,0.5)]">
                     <div class="text-3xl md:text-[2.5rem] font-[800] text-secondary opacity-30 mb-4 inline-block font-mono transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:text-white">05</div>
                     <h3 class="text-xl md:text-[1.5rem] text-white mb-4">Copii și Jucării</h3>
                     <p class="text-sm md:text-base text-[#bbb] mb-6 min-h-[60px]">Un magazin distractiv, orientat spre copii, plin de jucării, jocuri și activități pentru copii de toate vârstele.</p>
                     <span class="block text-[0.9rem] text-secondary font-bold pt-4 border-t border-solid border-[#444]">Etajul -1</span>
                 </div>
 
-                <div class="group bg-card-bg p-6 md:p-8 rounded-[10px] text-center shadow-[0_4px_15px_rgba(0,0,0,0.3)] transition-all duration-300 ease-in-out border-t-[5px] border-solid border-secondary w-full sm:flex-[1_1_314px] sm:max-w-[364px] hover:-translate-y-[10px] hover:shadow-[0_10px_25px_rgba(0,0,0,0.5)]">
+                <div class="group bg-card-bg p-6 md:p-8 rounded-[10px] text-center shadow-[0_4px_15px_rgba(0,0,0,0.3)] transition-all duration-300 ease-in-out border-t-[5px] border-solid border-secondary snap-center shrink-0 w-[85%] sm:w-auto sm:flex-[1_1_314px] sm:max-w-[364px] hover:-translate-y-[10px] hover:shadow-[0_10px_25px_rgba(0,0,0,0.5)]">
                     <div class="text-3xl md:text-[2.5rem] font-[800] text-secondary opacity-30 mb-4 inline-block font-mono transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:text-white">06</div>
                     <h3 class="text-xl md:text-[1.5rem] text-white mb-4">Magazin de Dulciuri</h3>
                     <p class="text-sm md:text-base text-[#bbb] mb-6 min-h-[60px]">Satisface-ți pofta de dulce cu o selecție largă de bomboane, ciocolată și bunătăți.</p>
@@ -237,36 +272,5 @@
             </div>
         </div>
     </footer>
-
-    <!-- Back to Top Button (Mobile Only) -->
-    <a href="#home" id="back-to-top" class="md:hidden fixed bottom-6 right-6 bg-secondary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg opacity-0 pointer-events-none transition-opacity duration-300 z-50 hover:bg-accent-hover">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
-        </svg>
-    </a>
-
-    <script>
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
-        const links = document.querySelectorAll('.mobile-link');
-        const backToTopBtn = document.getElementById('back-to-top');
-
-        function toggleMenu() {
-            menu.classList.toggle('hidden');
-        }
-
-        btn.addEventListener('click', toggleMenu);
-        links.forEach(link => link.addEventListener('click', toggleMenu));
-
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                backToTopBtn.classList.remove('opacity-0', 'pointer-events-none');
-                backToTopBtn.classList.add('opacity-100', 'pointer-events-auto');
-            } else {
-                backToTopBtn.classList.add('opacity-0', 'pointer-events-none');
-                backToTopBtn.classList.remove('opacity-100', 'pointer-events-auto');
-            }
-        });
-    </script>
 </body>
 </html>
