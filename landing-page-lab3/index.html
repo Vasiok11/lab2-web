@@ -141,46 +141,46 @@
     </section>
 
     <!-- Section 4: Contact & Location -->
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="eyebrow">Contactează-ne</span>
-                <h2>Vizitează-ne Astăzi</h2>
-                <p>Așteptăm cu nerăbdare vizita ta!</p>
+    <section id="contact" class="py-20 bg-bg-color">
+        <div class="w-[90%] max-w-[1200px] mx-auto">
+            <div class="text-center mb-16">
+                <span class="inline-block text-[0.85rem] uppercase tracking-[3px] text-secondary mb-[0.8rem] font-bold">Contactează-ne</span>
+                <h2 class="text-[2.8rem] text-white mb-4">Vizitează-ne Astăzi</h2>
+                <p class="text-[1.1rem] text-[#ccc] max-w-[600px] mx-auto">Așteptăm cu nerăbdare vizita ta!</p>
             </div>
             
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="info-item">
-                        <h3>Locație</h3>
-                        <p>str. 31 August 1989 28<br>Florești</p>
+            <div class="flex flex-wrap gap-12 justify-between">
+                <div class="flex-[1_1_300px] flex flex-col gap-8">
+                    <div>
+                        <h3 class="text-[1.3rem] text-white mb-2 flex items-center gap-2">Locație</h3>
+                        <p class="text-[#ccc] leading-[1.8]">str. 31 August 1989 28<br>Florești</p>
                     </div>
-                    <div class="info-item">
-                        <h3>Program General</h3>
-                        <p>Luni - Duminică: 8:00 - 19:00</p>
+                    <div>
+                        <h3 class="text-[1.3rem] text-white mb-2 flex items-center gap-2">Program General</h3>
+                        <p class="text-[#ccc] leading-[1.8]">Luni - Duminică: 8:00 - 19:00</p>
                     </div>
-                    <div class="info-item">
-                        <h3>Contact</h3>
-                        <p>Telefon: +373 60-707-147<br>Email: info@augustincenter.md</p>
+                    <div>
+                        <h3 class="text-[1.3rem] text-white mb-2 flex items-center gap-2">Contact</h3>
+                        <p class="text-[#ccc] leading-[1.8]">Telefon: +373 60-707-147<br>Email: info@augustincenter.md</p>
                     </div>
                 </div>
                 
-                <div class="contact-form-container">
-                    <h3>Ai întrebări sau sugestii?</h3>
-                    <form class="contact-form">
-                        <div class="form-group">
-                            <label for="name">Nume</label>
-                            <input type="text" id="name" name="name" required placeholder="Numele tău">
+                <div class="flex-[1_1_400px] bg-card-bg p-8 rounded-[10px] shadow-[0_4px_15px_rgba(0,0,0,0.3)] border-t-[5px] border-solid border-secondary">
+                    <h3 class="text-[1.5rem] text-white mb-6 text-center">Ai întrebări sau sugestii?</h3>
+                    <form class="flex flex-col gap-[1.2rem]">
+                        <div class="flex flex-col gap-2">
+                            <label for="name" class="text-[#ccc] font-medium">Nume</label>
+                            <input type="text" id="name" name="name" required placeholder="Numele tău" class="p-3 border border-solid border-[#444] rounded-[5px] bg-[#1a1a1a] text-white font-inherit text-[1rem] transition-colors duration-300 ease-in-out focus:outline-none focus:border-secondary">
                         </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required placeholder="Email-ul tău">
+                        <div class="flex flex-col gap-2">
+                            <label for="email" class="text-[#ccc] font-medium">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="Email-ul tău" class="p-3 border border-solid border-[#444] rounded-[5px] bg-[#1a1a1a] text-white font-inherit text-[1rem] transition-colors duration-300 ease-in-out focus:outline-none focus:border-secondary">
                         </div>
-                        <div class="form-group">
-                            <label for="message">Mesaj</label>
-                            <textarea id="message" name="message" rows="4" required placeholder="Cu ce te putem ajuta?"></textarea>
+                        <div class="flex flex-col gap-2">
+                            <label for="message" class="text-[#ccc] font-medium">Mesaj</label>
+                            <textarea id="message" name="message" rows="4" required placeholder="Cu ce te putem ajuta?" class="p-3 border border-solid border-[#444] rounded-[5px] bg-[#1a1a1a] text-white font-inherit text-[1rem] transition-colors duration-300 ease-in-out focus:outline-none focus:border-secondary"></textarea>
                         </div>
-                        <button type="submit" class="submit-btn">Trimite Mesajul</button>
+                        <button type="submit" class="bg-secondary text-white py-3 px-5 border-none rounded-[5px] text-[1.1rem] font-bold cursor-pointer transition-all duration-300 ease-in-out mt-4 hover:bg-accent-hover hover:-translate-y-[2px]">Trimite Mesajul</button>
                     </form>
                 </div>
             </div>
