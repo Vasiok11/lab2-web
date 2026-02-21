@@ -165,20 +165,20 @@
                     </div>
                 </div>
                 
-                <div class="flex-[1_1_400px] bg-card-bg p-8 rounded-[10px] shadow-[0_4px_15px_rgba(0,0,0,0.3)] border-t-[5px] border-solid border-secondary">
+                <div class="flex-[1_1_464px] bg-card-bg p-8 rounded-[10px] shadow-[0_4px_15px_rgba(0,0,0,0.3)] border-t-[5px] border-solid border-secondary">
                     <h3 class="text-[1.5rem] text-white mb-6 text-center">Ai întrebări sau sugestii?</h3>
                     <form class="flex flex-col gap-[1.2rem]">
                         <div class="flex flex-col gap-2">
                             <label for="name" class="text-[#ccc] font-medium">Nume</label>
-                            <input type="text" id="name" name="name" required placeholder="Numele tău" class="p-3 border border-solid border-[#444] rounded-[5px] bg-[#1a1a1a] text-white font-inherit text-[1rem] transition-colors duration-300 ease-in-out focus:outline-none focus:border-secondary">
+                            <input type="text" id="name" name="name" required placeholder="Numele tău" class="p-3 border border-solid border-[#444] rounded-[5px] bg-[#1a1a1a] text-white placeholder-[#757575] font-inherit text-[1rem] transition-colors duration-300 ease-in-out focus:outline-none focus:border-secondary leading-normal">
                         </div>
                         <div class="flex flex-col gap-2">
                             <label for="email" class="text-[#ccc] font-medium">Email</label>
-                            <input type="email" id="email" name="email" required placeholder="Email-ul tău" class="p-3 border border-solid border-[#444] rounded-[5px] bg-[#1a1a1a] text-white font-inherit text-[1rem] transition-colors duration-300 ease-in-out focus:outline-none focus:border-secondary">
+                            <input type="email" id="email" name="email" required placeholder="Email-ul tău" class="p-3 border border-solid border-[#444] rounded-[5px] bg-[#1a1a1a] text-white placeholder-[#757575] font-inherit text-[1rem] transition-colors duration-300 ease-in-out focus:outline-none focus:border-secondary leading-normal">
                         </div>
                         <div class="flex flex-col gap-2">
                             <label for="message" class="text-[#ccc] font-medium">Mesaj</label>
-                            <textarea id="message" name="message" rows="4" required placeholder="Cu ce te putem ajuta?" class="p-3 border border-solid border-[#444] rounded-[5px] bg-[#1a1a1a] text-white font-inherit text-[1rem] transition-colors duration-300 ease-in-out focus:outline-none focus:border-secondary"></textarea>
+                            <textarea id="message" name="message" rows="4" required placeholder="Cu ce te putem ajuta?" class="p-3 border border-solid border-[#444] rounded-[5px] bg-[#1a1a1a] text-white placeholder-[#757575] font-inherit text-[1rem] transition-colors duration-300 ease-in-out focus:outline-none focus:border-secondary leading-normal"></textarea>
                         </div>
                         <button type="submit" class="bg-secondary text-white py-3 px-5 border-none rounded-[5px] text-[1.1rem] font-bold cursor-pointer transition-all duration-300 ease-in-out mt-4 hover:bg-accent-hover hover:-translate-y-[2px]">Trimite Mesajul</button>
                     </form>
@@ -188,32 +188,32 @@
     </section>
 
     <!-- Footer -->
-    <footer class="site-footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <h2>Centrul Augustin</h2>
-                    <p>Centrul tău local pentru cumpărături, servicii și comunitate în inima cartierului. Tot ce ai nevoie sub același acoperiș.</p>
+    <footer class="bg-[#111] pt-16 pb-4 text-[#888] border-t border-solid border-[#333]">
+        <div class="w-[90%] max-w-[1200px] mx-auto">
+            <div class="flex flex-wrap gap-12 justify-between mb-12">
+                <div class="flex-[2_1_300px]">
+                    <h2 class="text-white text-[1.5rem] mb-4 uppercase tracking-[1px]">Centrul Augustin</h2>
+                    <p class="leading-[1.6] max-w-[400px]">Centrul tău local pentru cumpărături, servicii și comunitate în inima cartierului. Tot ce ai nevoie sub același acoperiș.</p>
                 </div>
-                <div class="footer-links">
-                    <h3>Linkuri Rapide</h3>
-                    <ul>
-                        <li><a href="#home">Acasă</a></li>
-                        <li><a href="#about">Despre Noi</a></li>
-                        <li><a href="#shops">Magazinele Noastre</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                <div class="flex-[1_1_150px]">
+                    <h3 class="text-white text-[1.2rem] mb-4">Linkuri Rapide</h3>
+                    <ul class="list-none p-0">
+                        <li class="mb-2"><a href="#home" class="text-[#888] no-underline transition-colors duration-300 ease-in-out hover:text-white">Acasă</a></li>
+                        <li class="mb-2"><a href="#about" class="text-[#888] no-underline transition-colors duration-300 ease-in-out hover:text-white">Despre Noi</a></li>
+                        <li class="mb-2"><a href="#shops" class="text-[#888] no-underline transition-colors duration-300 ease-in-out hover:text-white">Magazinele Noastre</a></li>
+                        <li class="mb-2"><a href="#contact" class="text-[#888] no-underline transition-colors duration-300 ease-in-out hover:text-white">Contact</a></li>
                     </ul>
                 </div>
-                <div class="footer-social">
-                    <h3>Urmărește-ne</h3>
-                    <div class="social-icons">
-                        <a href="#" class="social-icon">Facebook</a>
-                        <a href="#" class="social-icon">Instagram</a>
-                        <a href="#" class="social-icon">Twitter</a>
+                <div class="flex-[1_1_150px]">
+                    <h3 class="text-white text-[1.2rem] mb-4">Urmărește-ne</h3>
+                    <div class="flex flex-col gap-2">
+                        <a href="#" class="text-[#888] no-underline transition-colors duration-300 ease-in-out hover:text-white">Facebook</a>
+                        <a href="#" class="text-[#888] no-underline transition-colors duration-300 ease-in-out hover:text-white">Instagram</a>
+                        <a href="#" class="text-[#888] no-underline transition-colors duration-300 ease-in-out hover:text-white">Twitter</a>
                     </div>
                 </div>
             </div>
-            <div class="footer-bottom">
+            <div class="text-center pt-8 border-t border-solid border-[#333] text-[0.9rem]">
                 <p>&copy; 2026 Centrul Comercial Augustin. Toate drepturile rezervate.</p>
             </div>
         </div>
