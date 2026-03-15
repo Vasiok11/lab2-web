@@ -6,7 +6,7 @@ backend:
 # This allows us to use the CMS locally without connecting to Github yet!
 local_backend: true
 
-media_folder: "src/assets/images"
+media_folder: "landing-page-lab3/src/assets/images"
 public_folder: "/assets/images"
 
 collections:
@@ -15,8 +15,45 @@ collections:
     files:
       - label: "Pagina Principală (Acasă)"
         name: "home"
-        file: "src/index.njk"
+        file: "landing-page-lab3/src/index.md"
         fields:
+          - { name: "layout", widget: "hidden", default: "layouts/base.njk" }
+          - { name: "templateEngineOverride", widget: "hidden", default: "njk" }
           - { label: "Titlu Pagină", name: "title", widget: "string" }
-          # We will add more fields here in Step 5 when we refactor the HTML!
-          - { label: "Conținut (Invizibil în layout)", name: "body", widget: "markdown", required: false }
+          
+          # Hero Section Fields
+          - { label: "Hero - Subtitlu", name: "hero_subtitle", widget: "string", default: "Bun venit la" }
+          - { label: "Hero - Titlu", name: "hero_title", widget: "string", default: "Centrul Augustin" }
+          - { label: "Hero - Descriere", name: "hero_description", widget: "text" }
+              
+          # About Section Fields
+          - { label: "Despre Noi - Imagine", name: "about_image", widget: "image" }
+          - { label: "Despre Noi - Subtitlu", name: "about_subtitle", widget: "string", default: "Despre Noi" }
+          - { label: "Despre Noi - Titlu", name: "about_title", widget: "string" }
+              
+          # Shops Section Fields
+          - { label: "Magazine - Subtitlu", name: "shops_subtitle", widget: "string" }
+          - { label: "Magazine - Titlu", name: "shops_title", widget: "string" }
+          - { label: "Magazine - Descriere", name: "shops_description", widget: "text" }
+          - label: "Magazine - Listă"
+            name: "shops_list"
+            widget: "list"
+            fields:
+              - { label: "Număr", name: "number", widget: "string" }
+              - { label: "Nume", name: "name", widget: "string" }
+              - { label: "Descriere", name: "description", widget: "text" }
+              - { label: "Etaj", name: "floor", widget: "string" }
+
+          # Footer Section Fields
+          - { label: "Footer - Titlu (Nume Branding)", name: "footer_title", widget: "string" }
+          - { label: "Footer - Descriere", name: "footer_description", widget: "text" }
+          - label: "Linkuri Social Media"
+            name: "social_links"
+            widget: "list"
+            fields:
+              - { label: "Nume Platformă (ex: Facebook)", name: "name", widget: "string" }
+              - { label: "URL Link", name: "url", widget: "string" }
+          - { label: "Footer - Text Copyright", name: "footer_copyright", widget: "string" }
+
+          # Core body
+          - { label: "Conținut HTML (Invizibil în layout)", name: "body", widget: "markdown", required: false }

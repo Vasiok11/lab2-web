@@ -100,8 +100,8 @@
         <div class="w-[90%] max-w-[1200px] mx-auto">
             <div class="flex flex-col md:flex-row gap-10 md:gap-12 justify-between mb-12">
                 <div class="w-full md:flex-[2_1_300px]">
-                    <h2 class="text-gray-900 text-xl md:text-[1.5rem] mb-4 uppercase tracking-[1px]">Centrul Augustin</h2>
-                    <p class="text-sm md:text-base leading-[1.6] max-w-[400px]">Centrul tău local pentru cumpărături, servicii și comunitate în inima cartierului. Tot ce ai nevoie sub același acoperiș.</p>
+                    <h2 class="text-gray-900 text-xl md:text-[1.5rem] mb-4 uppercase tracking-[1px]">{{ footer_title }}</h2>
+                    <p class="text-sm md:text-base leading-[1.6] max-w-[400px]">{{ footer_description }}</p>
                 </div>
                 <div class="w-full md:flex-[1_1_150px]">
                     <h3 class="text-gray-900 text-lg md:text-[1.2rem] mb-4">Linkuri Rapide</h3>
@@ -115,14 +115,14 @@
                 <div class="w-full md:flex-[1_1_150px]">
                     <h3 class="text-gray-900 text-lg md:text-[1.2rem] mb-4">Urmărește-ne</h3>
                     <div class="flex flex-col gap-2 text-sm md:text-base">
-                        <a href="#" class="text-gray-500 no-underline transition-colors duration-300 ease-in-out hover:text-secondary">Facebook</a>
-                        <a href="#" class="text-gray-500 no-underline transition-colors duration-300 ease-in-out hover:text-secondary">Instagram</a>
-                        <a href="#" class="text-gray-500 no-underline transition-colors duration-300 ease-in-out hover:text-secondary">Twitter</a>
+                        {% for link in social_links %}
+                        <a href="{{ link.url }}" class="text-gray-500 no-underline transition-colors duration-300 ease-in-out hover:text-secondary">{{ link.name }}</a>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
             <div class="text-center pt-8 border-t border-solid border-gray-200 text-xs md:text-[0.9rem]">
-                <p>&copy; 2026 Centrul Comercial Augustin. Toate drepturile rezervate.</p>
+                <p>{{ footer_copyright | safe }}</p>
             </div>
         </div>
     </footer>
