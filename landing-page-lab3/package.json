@@ -1,0 +1,12 @@
+{
+  "name": "landing-page-11ty",
+  "version": "1.0.0",
+  "description": "Migration of landing page to 11ty",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}
