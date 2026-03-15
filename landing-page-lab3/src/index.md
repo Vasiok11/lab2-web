@@ -6,7 +6,7 @@ hero_subtitle: Bun venit la
 hero_title: Centrul Augustin
 hero_description: Centrul tău local pentru cumpărături și servicii. Descoperă o varietate de magazine și servicii esențiale chiar în cartierul tău.
 about_image: /assets/images/augustin.jpg
-about_subtitle: Despre Noi
+about_subtitle: Despre Noii
 about_title: Destinația Ta Locală Principală
 shops_subtitle: Directorul Centrului
 shops_title: Descoperă Ce Se Află Înăuntru
@@ -40,12 +40,12 @@ footer_title: Centrul Augustin
 footer_description: Centrul tău local pentru cumpărături, servicii și comunitate în inima cartierului. Tot ce ai nevoie sub același acoperiș.
 social_links:
   - name: Facebook
-    url: "#"
+    url: '#'
   - name: Instagram
-    url: "#"
+    url: '#'
   - name: Twitter
-    url: "#"
-footer_copyright: "&copy; 2026 Centrul Comercial Augustin. Toate drepturile rezervate."
+    url: '#'
+footer_copyright: '&copy; 2026 Centrul Comercial Augustin. Toate drepturile rezervate.'
 ---
 
 <section id="home" class="min-h-[calc(100vh-74px)] flex items-center justify-center text-center py-16 relative bg-gradient-to-b from-blue-100 via-bg-color to-bg-color">
