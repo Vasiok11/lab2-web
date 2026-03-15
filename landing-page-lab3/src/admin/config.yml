@@ -1,0 +1,22 @@
+backend:
+  name: github
+  repo: "OWNER/REPO" # We'll need to link this to your Github later
+  branch: main
+
+# This allows us to use the CMS locally without connecting to Github yet!
+local_backend: true
+
+media_folder: "src/assets/images"
+public_folder: "/assets/images"
+
+collections:
+  - name: "pages"
+    label: "Pagini"
+    files:
+      - label: "Pagina Principală (Acasă)"
+        name: "home"
+        file: "src/index.njk"
+        fields:
+          - { label: "Titlu Pagină", name: "title", widget: "string" }
+          # We will add more fields here in Step 5 when we refactor the HTML!
+          - { label: "Conținut (Invizibil în layout)", name: "body", widget: "markdown", required: false }
