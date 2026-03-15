@@ -1,10 +1,10 @@
 backend:
   name: github
-  repo: "OWNER/REPO" # We'll need to link this to your Github later
-  branch: main
+  repo: "Vasiok11/lab2-web" 
+  branch: lab4
 
 # This allows us to use the CMS locally without connecting to Github yet!
-local_backend: true
+# local_backend: true
 
 media_folder: "landing-page-lab3/src/assets/images"
 public_folder: "/assets/images"
