@@ -9,7 +9,7 @@ about_image: /assets/images/augustin.jpg
 about_subtitle: Despre Noii
 about_title: Destinația Ta Locală Principală
 shops_subtitle: Directorul Centrului
-shops_title: Descoperă Ce Se Află Înăuntruu
+shops_title: Descoperă Ce Se Află Înăuntru
 shops_description: De la produse esențiale zilnice la cele mai noi electronice, explorează trei etaje de magazine și servicii dedicate.
 shops_list:
   - number: '02'
